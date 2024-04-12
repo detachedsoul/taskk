@@ -105,7 +105,7 @@ const NavLinks = ({isActive}: component): JSX.Element => {
     ];
 
     return (
-        <nav className={`fixed grid gap-6 border bg-black text-neutral-400 border-neutral-700 rounded-lg p-4 overflow-y-auto custom-scrollbar h-4/5 w-[90%] left-[5%] ${isActive ? 'bottom-4' : '-bottom-full'} z-50 transition-all ease-in-out duration-500 lg:absolute lg:h-full lg:w-full lg:top-0 lg:left-0 lg:border-transparent lg:border-0 lg:rounded-none lg:pt-0`}>
+        <nav className={`fixed grid gap-6 border bg-black text-neutral-400 border-neutral-900 rounded-xl p-4 overflow-y-auto custom-scrollbar h-4/5 w-[90%] left-[5%] ${isActive ? 'bottom-4' : '-bottom-full'} z-50 transition-all ease-in-out duration-500 lg:absolute lg:h-full lg:w-full lg:top-0 lg:left-0 lg:border-transparent lg:border-0 lg:rounded-none lg:pt-0`}>
             <Link className="hidden font-bold text-2xl items-center gap-2 lg:flex lg:sticky lg:top-0 bg-inherit pt-4 pb-4" href="/">
                 <CommandIcon />
 
@@ -116,7 +116,7 @@ const NavLinks = ({isActive}: component): JSX.Element => {
                 <label className="flex items-center gap-2" htmlFor="search">
                     <SearchIcon strokeWidth={1} />
 
-                    <input className="bg-inherit py-2 outline-none w-full focus:text-white focus:placeholder:text-white" type="search" name="search" id="search" placeholder="Search" />
+                    <input className="bg-inherit py-2 outline-none w-full placeholder:text-neutral-400 focus:text-white focus:placeholder:text-white" type="search" name="search" id="search" placeholder="Search" />
 
                     <MicIcon strokeWidth={1} />
                 </label>

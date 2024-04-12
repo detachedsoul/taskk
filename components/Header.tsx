@@ -15,7 +15,7 @@ const Header = (): JSX.Element => {
     const [activeLink, setActiveLink] = useState<string>("home");
 
     return (
-        <header className="flex items-center gap-4 justify-between p-4 bg-neutral-900 sticky top-0 lg:col-span-3 lg:block lg:p-0 lg:h-screen">
+        <header className="flex items-center gap-4 justify-between p-4 bg-black sticky top-0 lg:col-span-3 lg:block lg:p-0 lg:h-screen">
             <Link className="font-bold text-2xl flex items-center gap-2 lg:hidden" href="/">
                 <CommandIcon />
 
@@ -23,15 +23,15 @@ const Header = (): JSX.Element => {
             </Link>
 
             <div className="flex items-center gap-4 lg:hidden">
-                <button type="button" aria-label="Toggle settings">
+                <button className="bg-neutral-700 p-2 rounded-lg" type="button" aria-label="Toggle settings">
                     <SettingsIcon strokeWidth={1} />
                 </button>
 
-                <button type="button" aria-label="Toggle searchbar" onClick={() => setSearchBarIsActive(!searchBarIsActive)}>
+                <button className="bg-neutral-700 p-2 rounded-lg" type="button" aria-label="Toggle searchbar" onClick={() => setSearchBarIsActive(!searchBarIsActive)}>
                     <SearchIcon strokeWidth={1} />
                 </button>
 
-                <button type="button" onClick={() => setNavBarIsActive(!navBarIsActive)} aria-label="Toggle mobile menu">
+                <button className="bg-neutral-700 p-2 rounded-lg" type="button" onClick={() => setNavBarIsActive(!navBarIsActive)} aria-label="Toggle mobile menu">
                     {navBarIsActive ? (
                         <XIcon strokeWidth={1} />
                     ) : (

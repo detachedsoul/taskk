@@ -1,8 +1,8 @@
+import NoContent from "@/components/NoContent";
+
 const Index = (): JSX.Element => {
     return (
-        <p>
-            Main content
-        </p>
+        <NoContent />
     );
 };
 
