@@ -1,18 +1,22 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import useTheme from "@/hooks/useTheme";
 import NavLinks from "@/components/NavLinks";
 import Searchbar from "@/components/Searchbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { SettingsIcon, MenuIcon, XIcon, SearchIcon, CommandIcon } from "lucide-react";
 
 const Header = (): JSX.Element => {
-    const { theme, toggleTheme } = useTheme();
+    const pathname = usePathname();
+
     const [navBarIsActive, setNavBarIsActive] = useState<boolean>(false);
     const [searchBarIsActive, setSearchBarIsActive] = useState<boolean>(false);
-    const [activeLink, setActiveLink] = useState<string>("home");
+
+    useEffect(() => {
+        setNavBarIsActive(false);
+        setSearchBarIsActive(false);
+    }, [pathname]);
 
     return (
         <header className="flex items-center gap-4 justify-between p-4 bg-black sticky top-0 lg:col-span-3 lg:block lg:p-0 lg:h-screen">
