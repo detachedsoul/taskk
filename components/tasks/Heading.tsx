@@ -17,7 +17,7 @@ const NoContent = (): JSX.Element => {
                 <span className="btn bg-neutral-800 text-white">Overview</span>
             </div>
 
-            <div className="items-center gap-4 flex-wrap hidden md:flex">
+            <div className="items-center gap-4 flex-wrap hidden sm:flex">
                 <div className="flex items-center">
                     <span className="rounded-full bg-neutral-900 p-2 text-white">
                         <Image className="rounded-full w-8 h-auto" src={User} alt="user icons" />

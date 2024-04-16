@@ -2,21 +2,18 @@
 
 import Link from "next/link";
 import NavLinks from "@/components/NavLinks";
-import Searchbar from "@/components/Searchbar";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { SettingsIcon, MenuIcon, XIcon, SearchIcon, CommandIcon, PlusIcon, BellIcon } from "lucide-react";
+import { SettingsIcon, MenuIcon, XIcon, CommandIcon, PlusIcon, BellIcon } from "lucide-react";
 
 const Header = (): JSX.Element => {
     const pathname = usePathname();
 
     const [navBarIsActive, setNavBarIsActive] = useState<boolean>(false);
-    const [searchBarIsActive, setSearchBarIsActive] = useState<boolean>(false);
     const [settingPopupIsActive, setSettingPopupIsActive] = useState<boolean>(false);
 
     useEffect(() => {
         setNavBarIsActive(false);
-        setSearchBarIsActive(false);
     }, [pathname]);
 
     return (
@@ -29,11 +26,11 @@ const Header = (): JSX.Element => {
 
             <div className="flex items-center gap-4 lg:hidden">
                 <div className="relative">
-                    <button className="bg-neutral-900 p-2 rounded-lg" type="button" aria-label="Toggle settings" onClick={() => setSettingPopupIsActive(!settingPopupIsActive)}>
+                    <button className="bg-neutral-900 p-2 rounded-lg sm:hidden" type="button" aria-label="Toggle settings" onClick={() => setSettingPopupIsActive(!settingPopupIsActive)}>
                         <SettingsIcon strokeWidth={1} />
                     </button>
 
-                    <ul className={`rounded-lg border border-neutral-800 bg-black p-2 grid gap-4 absolute min-w-max -left-[calc(100%-0.5rem)] top-[calc(100%+1.5rem)] transition-transform ease-in-out duration-500 z-first ${settingPopupIsActive ? 'translate-y-0' : '-translate-y-[200%]'}`}>
+                    <ul className={`rounded-lg border border-neutral-800 bg-black p-2 grid gap-4 absolute min-w-max -left-[calc(200%+0.2rem)] top-[calc(100%+1.5rem)] transition-transform ease-in-out duration-500 z-first ${settingPopupIsActive ? 'translate-y-0' : '-translate-y-[200%]'}`}>
                         <li>
                             <button className="btn flex items-center gap-2 hover:bg-neutral-900" type="button">
                                 <PlusIcon strokeWidth={1} size={20} />
@@ -60,10 +57,6 @@ const Header = (): JSX.Element => {
                     </ul>
                 </div>
 
-                <button className="bg-neutral-900 p-2 rounded-lg" type="button" aria-label="Toggle searchbar" onClick={() => setSearchBarIsActive(!searchBarIsActive)}>
-                    <SearchIcon strokeWidth={1} />
-                </button>
-
                 <button className="bg-neutral-900 p-2 rounded-lg" type="button" onClick={() => setNavBarIsActive(!navBarIsActive)} aria-label="Toggle mobile menu">
                     {navBarIsActive ? (
                         <XIcon strokeWidth={1} />
@@ -74,8 +67,6 @@ const Header = (): JSX.Element => {
             </div>
 
             <NavLinks isActive={navBarIsActive} />
-
-            <Searchbar isActive={searchBarIsActive} />
         </header>
     );
 };

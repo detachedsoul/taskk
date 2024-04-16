@@ -383,9 +383,9 @@ const Sections = (): JSX.Element => {
     ];
 
     return (
-        <div className="grid gap-4 items-start md:flex md:min-w-full md:overflow-x-auto md:custom-scrollbar">
+        <div className="grid gap-4 items-start sm:flex sm:min-w-full sm:overflow-x-auto sm:custom-scrollbar">
             {cardSections.map((card: sections): JSX.Element => (
-                <div className="grid gap-8 bg-black rounded-xl px-4 py-8 md:min-w-[45%] lg:min-w-[40%]" key={card.id}>
+                <div className="grid gap-8 bg-black rounded-xl px-4 py-8 sm:min-w-[70%] md:min-w-[45%] lg:min-w-[40%]" key={card.id}>
                     <div className="flex items-center gap-4 justify-between flex-wrap">
                         <div className="flex items-center gap-3">
                             <div className={`w-1.5 h-8 rounded-full ${card.sectionBackgroundColor}`}></div>
