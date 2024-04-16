@@ -20,7 +20,7 @@ const Header = (): JSX.Element => {
     }, [pathname]);
 
     return (
-        <header className="flex items-center gap-4 justify-between p-4 bg-black sticky top-0 lg:col-span-3 lg:block lg:p-0 lg:h-screen">
+        <header className="flex items-center gap-4 justify-between p-4 bg-black sticky top-0 z-[1024] lg:col-span-3 lg:block lg:p-0 lg:h-screen">
             <Link className="font-bold text-2xl flex items-center gap-2 lg:hidden" href="/">
                 <CommandIcon />
 
@@ -33,7 +33,7 @@ const Header = (): JSX.Element => {
                         <SettingsIcon strokeWidth={1} />
                     </button>
 
-                    <ul className={`rounded-lg border border-neutral-800 bg-black p-2 grid gap-4 absolute min-w-max -left-[calc(100%-0.5rem)] top-[calc(100%+1.5rem)] transition-transform ease-in-out duration-500 z-50 ${settingPopupIsActive ? 'translate-y-0' : '-translate-y-[200%]'}`}>
+                    <ul className={`rounded-lg border border-neutral-800 bg-black p-2 grid gap-4 absolute min-w-max -left-[calc(100%-0.5rem)] top-[calc(100%+1.5rem)] transition-transform ease-in-out duration-500 z-first ${settingPopupIsActive ? 'translate-y-0' : '-translate-y-[200%]'}`}>
                         <li>
                             <button className="btn flex items-center gap-2 hover:bg-neutral-900" type="button">
                                 <PlusIcon strokeWidth={1} size={20} />
