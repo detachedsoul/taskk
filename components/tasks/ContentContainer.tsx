@@ -40,7 +40,7 @@ const ContentContainer = (): JSX.Element => {
 
                 <div className="flex items-center gap-8 justify-between flex-wrap">
                     <div className="flex items-center flex-wrap gap-4 divide-x-[2px] divide-neutral-700">
-                        <ul className="bg-black flex items-center gap-1 rounded-lg p-1">
+                        <ul className="bg-black flex items-center flex-wrap gap-1 rounded-lg p-1">
                             {boardSections.map((board: boards): JSX.Element => (
                                 <li key={board.id}>
                                     <button className={`btn ${activeSection === board.boardName ? "bg-neutral-800 text-white font-bold" : "hover:bg-neutral-800 hover:text-white"}`} type="button" onClick={() => setActiveSection(board.boardName)}>

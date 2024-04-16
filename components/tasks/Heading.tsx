@@ -17,7 +17,7 @@ const NoContent = (): JSX.Element => {
                 <span className="btn bg-neutral-800 text-white">Overview</span>
             </div>
 
-            <div className="flex items-center gap-4 flex-wrap">
+            <div className="items-center gap-4 flex-wrap hidden lg:flex">
                 <div className="flex items-center">
                     <span className="rounded-full bg-neutral-900 p-2 text-white">
                         <Image className="rounded-full w-8 h-auto" src={User} alt="user icons" />
@@ -49,7 +49,7 @@ const NoContent = (): JSX.Element => {
                 <button className="relative" type="button" aria-label="View notifications">
                     <BellIcon strokeWidth={1.5} />
 
-                    <span className="w-3 h-3 rounded-full inline-block bg-orange-500 absolute top-0 right-0 border-2 border-neutral-900"></span>
+                    <span className="w-2.5 h-2.5 rounded-full inline-block bg-orange-400 absolute -top-0.5 right-0.5 border-2 border-neutral-900"></span>
                 </button>
             </div>
         </section>
