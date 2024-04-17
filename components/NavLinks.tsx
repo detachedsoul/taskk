@@ -152,20 +152,20 @@ const NavLinks = ({isActive}: component): JSX.Element => {
     ];
 
     return (
-        <nav className={`fixed grid gap-6 border bg-black text-neutral-400 border-neutral-700 rounded-xl p-4 overflow-y-auto custom-scrollbar h-4/5 w-[90%] left-[5%] sm:w-4/5 sm:left-[10%] ${isActive ? 'bottom-4' : '-bottom-full'} z-first transition-all ease-in-out duration-500 lg:absolute lg:h-full lg:w-full lg:top-0 lg:left-0 lg:border-transparent lg:border-0 lg:rounded-none lg:pt-0`}>
-            <Link className="hidden font-bold text-2xl items-center gap-2 lg:flex lg:sticky lg:top-0 bg-inherit pt-4 pb-4" href="/">
+        <nav className={`fixed grid gap-6 border bg-black text-neutral-400 border-neutral-700 rounded-xl p-4 overflow-y-auto custom-scrollbar h-4/5 w-[90%] left-[5%] sm:w-4/5 sm:left-[10%] ${isActive ? 'bottom-4' : '-bottom-full'} z-first transition-all ease-in-out duration-500 lg:absolute lg:h-full lg:w-full lg:top-0 lg:left-0 lg:border-transparent lg:border-0 lg:rounded-none lg:pt-0 dark:bg-stone-100 dark:text-stone-600 dark:font-medium`}>
+            <Link className="hidden font-bold text-2xl items-center gap-2 lg:flex lg:sticky lg:top-0 bg-inherit pt-4 pb-4 dark:text-black dark:bg-stone-100" href="/">
                 <CommandIcon />
 
                 Taskk
             </Link>
 
-            <form className="bg-neutral-900 text-neutral-400 px-3 rounded-lg lg:-mt-4">
-                <label className="flex items-center gap-2" htmlFor="search">
-                    <SearchIcon strokeWidth={1} />
+            <form className="lg:-mt-4">
+                <label className="flex items-center gap-2 bg-neutral-900 text-neutral-400 dark:bg-stone-200 dark:text-stone-400 px-3 rounded-lg" htmlFor="search">
+                    <SearchIcon strokeWidth={1.5} />
 
-                    <input className="bg-inherit py-2 outline-none w-full placeholder:text-neutral-400 focus:text-white focus:placeholder:text-white" type="search" name="search" id="search" placeholder="Search" />
+                    <input className="bg-inherit py-2 outline-none w-full placeholder:text-neutral-400 focus:text-white focus:placeholder:text-white dark:focus:text-stone-400 dark:focus:placeholder:text-stone-400" type="search" name="search" id="search" placeholder="Search" />
 
-                    <MicIcon strokeWidth={1} />
+                    <MicIcon strokeWidth={1.5} />
                 </label>
             </form>
 
@@ -174,7 +174,7 @@ const NavLinks = ({isActive}: component): JSX.Element => {
                     <ul className="grid gap-2">
                         {links.map((link: navLinks): JSX.Element => (
                             <li key={link.id}>
-                                <Link className={`flex items-center gap-2 btn border ${pathname === link.route ? 'bg-neutral-900 border-neutral-700 text-white font-bold' : 'border-transparent hover:bg-neutral-900 hover:border-neutral-700 hover:text-white'}`} href={link.route}>
+                                <Link className={`flex items-center gap-2 btn border ${pathname === link.route ? 'bg-neutral-900 border-neutral-700 text-white font-bold dark:text-black dark:bg-white dark:border-slate-300' : 'border-transparent hover:bg-neutral-900 hover:border-neutral-700 hover:text-white dark:hover:text-black dark:hover:bg-white dark:hover:border-slate-300'}`} href={link.route}>
                                     {link.icon}
 
                                     {link.routeName}
@@ -211,7 +211,7 @@ const NavLinks = ({isActive}: component): JSX.Element => {
                                 <ul className="grid gap-2 overflow-hidden">
                                     {link.categoryLinks.map((link: navLinks): JSX.Element => (
                                         <li key={link.id}>
-                                            <Link className={`flex items-center gap-2 btn border ${pathname === link.route ? 'bg-neutral-900 border-neutral-700 text-white font-bold' : 'border-transparent hover:bg-neutral-900 hover:border-neutral-700 hover:text-white'}`} href={link.route}>
+                                            <Link className={`flex items-center gap-2 btn border ${pathname === link.route ? 'bg-neutral-900 border-neutral-700 text-white font-bold dark:text-black dark:bg-white dark:border-slate-300' : 'border-transparent hover:bg-neutral-900 hover:border-neutral-700 hover:text-white dark:hover:text-black dark:hover:bg-white dark:hover:border-slate-300'}`} href={link.route}>
                                                 {link.icon}
 
                                                 {link.routeName}
@@ -224,12 +224,12 @@ const NavLinks = ({isActive}: component): JSX.Element => {
                     ))}
                 </div>
 
-                <button className="bg-neutral-900 border border-neutral-800 rounded-lg p-2 flex items-center justify-between" type="button">
+                <button className="bg-neutral-900 border border-neutral-800 rounded-lg p-2 flex items-center justify-between dark:bg-stone-200 dark:border-stone-100 dark:text-neutral-700" type="button">
                     <div className="flex items-center gap-3">
                         <Image className="rounded-lg w-12 h-12 object-cover" src={User} alt="David Visuals" />
 
                         <div className="-space-y-0.5">
-                            <h3 className="font-bold text-white text-left">
+                            <h3 className="font-bold text-white text-left dark:text-stone-700/50">
                                 David Visuals
                             </h3>
 

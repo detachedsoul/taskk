@@ -21,10 +21,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${urbanist.variable} bg-black text-white font-urbanist w-full scroll-smooth lg:grid lg:grid-cols-12 lg:items-start`}>
+            <body className={`${urbanist.variable} bg-black text-white font-urbanist w-full scroll-smooth lg:grid lg:grid-cols-12 lg:items-start dark:bg-stone-100`}>
                 <Header />
 
-                <main className="py-4 grid text-neutral-400 lg:col-span-9 lg:mt-4 lg:rounded-tl-3xl lg:border bg-neutral-900 lg:border-neutral-700 lg:sticky lg:top-4">
+                <main className="py-4 grid text-neutral-400 lg:col-span-9 lg:mt-4 lg:rounded-tl-3xl lg:border bg-neutral-900 lg:border-neutral-700 lg:sticky lg:top-4 dark:bg-white dark:lg:border-2 dark:border-stone-300/50 dark:text-stone-600 dark:font-medium">
                     {children}
                 </main>
             </body>
