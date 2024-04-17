@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-    darkMode: 'media',
+    darkMode: 'class',
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,8 +10,7 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                urbanist: ['var(--font-urbanist)'],
-                pacifico: ['var(--font-pacifico)'],
+                urbanist: ['var(--font-urbanist)']
             },
         },
     },
